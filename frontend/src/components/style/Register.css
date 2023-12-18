@@ -1,0 +1,51 @@
+/* src/components/Login.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c2dfff; /* Fondo azul oscuro para toda la pantalla */
+  color: #fff; /* Color del texto blanco */
+}
+
+.container {
+  background-color: #1a1a1a;
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total del input */
+}
+
+.button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.link {
+  cursor: pointer;
+  color: #3498db;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

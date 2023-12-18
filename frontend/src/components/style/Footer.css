@@ -1,0 +1,9 @@
+/* Footer.css */
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: relative; /* Esta línea no es necesaria si no usas position: absolute o fixed en algún otro elemento dentro del pie de página */
+}

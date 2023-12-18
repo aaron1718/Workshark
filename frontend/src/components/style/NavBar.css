@@ -1,0 +1,71 @@
+.navbar-container {
+  width: 100%;
+  background-color: #f3f6f4;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.button-nav {
+  text-decoration: none;
+  background-color: #90a8c9 ;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: auto; /* Ajusta el tamaño del logo según tus preferencias */
+  height: 40px;
+  margin-left: 5%;
+
+}
+
+
+
+.button-perfil {
+  text-decoration: none;
+  background-color: darkblue;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+.red-button {
+  background-color: red;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.nav-list {
+  margin-left: 35%;
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex; /* Añadido para que los elementos se alineen correctamente */
+  align-items: center; /* Añadido para centrar verticalmente los elementos */
+  margin-left: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.red-text {
+  color: red;
+  cursor: pointer;
+}

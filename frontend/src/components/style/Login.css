@@ -1,0 +1,59 @@
+/* src/components/Login.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c2dfff; /* Fondo azul oscuro para toda la pantalla */
+  color: #fff; /* Color del texto blanco */
+}
+
+.logo-login {
+  max-width: 100%; /* Ajusta según tus necesidades */
+  height: auto;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  margin: 50px auto; /* Centra el contenedor verticalmente */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff; /* Fondo blanco del contenedor */
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Borde del input */
+  border-radius: 5px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total del input */
+}
+
+.button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.link {
+  cursor: pointer;
+  color: #3498db;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  margin-top: -10px; /* Ajuste para alinear el mensaje de error debajo del input */
+  margin-bottom: 10px;
+}
