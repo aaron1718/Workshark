@@ -25,7 +25,6 @@ const Login = ({ onLogin }) => {
       try {
         const response = await axios.post('http://localhost:3000/auth/login', values);
 
-        console.log(response.data);
         onLogin(values.email);  // Asegúrate de pasar el email al evento onLogin
         navigate('/inicio');
       } catch (error) {

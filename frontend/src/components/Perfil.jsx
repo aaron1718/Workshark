@@ -13,12 +13,10 @@ const Perfil = ({ loggedInUserEmail, onLogout }) => {
 	useEffect(() => {
 	  const fetchData = async () => {
 	    try {
-	      console.time('Tiempo de solicitud');
 	      setIsLoading(true);
 
 	      if (loggedInUserEmail) {
 	        const response = await axios.get(`http://localhost:3000/auth/find-by-email/${loggedInUserEmail}`);
-	        console.log('Respuesta del servidor:', response.data);
 	        setUserData(response.data);
 	      } else {
 	        console.error('Correo electrónico del usuario indefinido.');
@@ -27,7 +25,6 @@ const Perfil = ({ loggedInUserEmail, onLogout }) => {
 	      console.error('Error al cargar el perfil:', error);
 	    } finally {
 	      setIsLoading(false);
-	      console.timeEnd('Tiempo de solicitud');
 	    }
 	  };
 

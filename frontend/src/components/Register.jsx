@@ -27,7 +27,6 @@ const Register = () => {
       try {
         const response = await axios.post('http://localhost:3000/auth/register', values);
 
-        console.log(response.data);
         // Manejar la respuesta, por ejemplo, redirigir al usuario a la página de inicio de sesión
         navigate('/login');
       } catch (error) {

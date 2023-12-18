@@ -62,8 +62,6 @@ const DetalleEmpleo = ({ loggedInUserEmail, onLogout }) => {
         empleoId: empleoId,
       });
 
-      console.log('Respuesta al agregar comentario:', response.data);
-
       const comentarioNuevo = {
         comentarioId: response.data.comentarioId,
         comentario: response.data.comentario,
@@ -126,7 +124,7 @@ const DetalleEmpleo = ({ loggedInUserEmail, onLogout }) => {
           <p className="detalle-empleo-description">{empleo.descripcion}</p>
           <p className="detalle-empleo-salary">Salario: $ {empleo.salario}</p>
           <img className="detalle-empleo-image" src={empleo.urlfoto} alt="Imagen del empleo" />
-          {loggedInUserEmail === empleo.userEmailCreator && (
+          {loggedInUserEmail === "admin@admin.com" && 
             <>
               <button className="boton-editar" onClick={handleEditarEmpleoClick}>
                 Editar Empleo
@@ -136,12 +134,11 @@ const DetalleEmpleo = ({ loggedInUserEmail, onLogout }) => {
                 Eliminar Empleo
               </button>
             </>
-
-          )}
+          }
           <div className="comentarios-container">
             <h3>Comentarios</h3>
-            {comentarios.length > 0 && comentarios.map((comentario) => (
-              <div key={comentario.comentarioId} className="comentario-container">
+            {comentarios.length > 0 && comentarios.map((comentario, index) => (
+              <div key={index} className="comentario-container">
                 <p className="comentario-text">{comentario.comentario}</p>
                 <p className="usuario-info">Usuario: {comentario.userEmail}</p>
               </div>

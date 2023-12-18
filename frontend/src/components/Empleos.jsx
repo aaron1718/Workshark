@@ -34,8 +34,6 @@ const EmpleoForm = ({ onLogout, loggedInUserEmail  }) => {
       });
 
       alert('Empleo creado exitosamente');
-
-      console.log('Empleo creado:', response.data);
       window.location.reload();
 
       // Puedes realizar otras acciones después de la creación exitosa

@@ -16,7 +16,6 @@ function App() {
   const [loggedInUserEmail, setLoggedInUserEmail] = useState(storedUserEmail);
 
   const handleLogin = (userEmail) => {
-    console.log('Iniciando sesión con:', userEmail);
     setIsAuthenticated(true);
     setLoggedInUserEmail(userEmail);
     // Almacena el correo electrónico del usuario en localStorage al iniciar sesión
