@@ -104,24 +104,15 @@ router.delete('/:empleoId', async (req, res) => {
   try {
     const { empleoId } = req.params;
 
+    console.log(empleoId)
+
     // Busca el empleo por ID
-    const empleo = await Empleo.findByPk(empleoId, {
-      include: [{ model: Comentario, as: 'comentarios' }],
-    });
+    const empleo = await Empleo.findByPk(empleoId);
 
     if (!empleo) {
       return res.status(404).json({ message: 'Empleo no encontrado' });
     }
 
-    // Verifica si el usuario que solicita la eliminación es el creador del empleo
-    if (empleo.userEmailCreator !== req.user.email) {
-      return res.status(403).json({ message: 'No tienes permiso para eliminar este empleo' });
-    }
-
-    // Elimina los comentarios asociados al empleo
-    await empleo.comentarios.forEach(async (comentario) => {
-      await comentario.destroy();
-    });
 
     // Elimina el empleo
     await empleo.destroy();
